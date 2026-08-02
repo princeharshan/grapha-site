@@ -912,10 +912,16 @@ p { margin: 0; text-wrap: pretty; }
 
 /* The window. `--app-canvas` is the app grey; the card inside it is white with
    an EQUAL 8px frame on all four sides (owner, 2026-07-23). */
+/* CONCENTRIC: outer radius = inner radius + frame. The card inside is 15px (the
+   app's own `--r-card`) on an 8px frame, so the window is 23px. It read wrong at
+   14px because the inner corner was then ROUNDER than the outer one containing
+   it — two arcs bending against each other, and the grey frame pinching thin at
+   the corner while staying 8px along the edges. Change one of these three
+   numbers and you owe the other two. */
 #e .app {
   position: relative;
   padding: 8px;
-  border-radius: 14px;
+  border-radius: 23px;
   background: var(--app-canvas);
   box-shadow:
     0 0 0 0.5px var(--hairline-2),
@@ -1018,7 +1024,22 @@ p { margin: 0; text-wrap: pretty; }
 #e .app-bar .bnum { font-variant-numeric: tabular-nums; }
 #e .app-bar .bsep { margin: 0 8px; letter-spacing: 0; }
 #e .app-bar .bgrow { flex: 1; }
-#e .app-bar .bpill { height: 18px; padding: 0 7px; font-size: 9px; }
+/* The label in the bar. It inherited only its two tint colours from `.lp-violet`
+   and none of `.label-pill`'s anatomy, so it drew as a SQUARE block with the word
+   sitting off-centre — a bare `<span>` with a height is not a box that centres
+   anything. `inline-flex` + `align-items: center` is what actually centres it;
+   the height alone never did. Radius 5 is the bar's own (`--bar-item-radius` in
+   the app, and `.bi` beside it here), so the row reads as one set of chips. */
+#e .app-bar .bpill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  padding: 0 7px;
+  border-radius: 5px;
+  font-size: 9px;
+  line-height: 1;
+}
 
 /* The comments panel: 360px, embedded in the grey rather than floating on it. */
 #e .app-panel { flex: 0 0 300px; padding: 18px 10px 0 0; }
