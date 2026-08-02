@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Grapha</title>
+<meta name="theme-color" content="#F7F8FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* A reading page. It borrows the site's tokens from `styles.css` — one
+     palette, one type scale, so this page cannot drift away from the homepage
+     the way a second stylesheet would. */
+  .page { max-width: 660px; margin: 0 auto; padding: 56px 20px 72px; }
+  .page h1 { font-size: var(--t-27); font-weight: 600; letter-spacing: -0.028em; margin: 0 0 8px; }
+  .page .sub { color: var(--ink-3); margin: 0 0 40px; font-size: var(--t-15); }
+  .page h2 { font-size: var(--t-17); font-weight: 600; margin: 40px 0 8px; }
+  .page p, .page li { font-size: var(--t-15); line-height: 1.7; color: var(--ink-2); }
+  .page p + p { margin-top: 12px; }
+  .page ul { padding-left: 1.2em; }
+  .page li { margin-bottom: 4px; }
+  .page strong { color: var(--ink); font-weight: 500; }
+  .page a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .back { display: inline-block; margin-bottom: 40px; font-size: var(--t-15); color: var(--ink-3); text-decoration: none; }
+  .back:hover { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="page">
+  <a class="back" href="./">&larr; Grapha</a>
+
+  <h1>Privacy</h1>
+  <p class="sub">Short, because there is little to say.</p>
+
+  <h2>Your notes</h2>
+  <p>Your notes are Markdown files in a folder on your Mac. Grapha has no server, no account, and no sync. Nothing you write is uploaded anywhere, and there is nowhere for it to be uploaded to.</p>
+
+  <h2>Databases you connect</h2>
+  <p>Connections are read-only and run from your Mac. Credentials are stored in the macOS Keychain and never leave it. A language model is never given a credential and never executes a query &mdash; the app runs the query locally.</p>
+
+  <h2>Checking for updates</h2>
+  <p>Once a day, Grapha reads a single static file from this website to learn whether a newer version exists. The request carries no identifier: no account, no device id, no licence key, not even your version number. Everybody who asks gets the same file. You can switch the check off in <strong>Settings &#9656; General</strong>.</p>
+
+  <h2>Crash reports</h2>
+  <p>macOS writes a crash report to your own disk whenever an app on your Mac stops unexpectedly. If Grapha finds one of its own, it asks whether to send it, and it shows you the exact text first. Nothing is sent unless you press Send. The report contains the app version, your macOS version, and the technical stack trace of the failure. It contains no note text, no file names, no file paths and no database details.</p>
+  <p>Reports go to our public feedback board so duplicates can be merged and the worst bugs prioritised. Your Mac is identified there only by an irreversible one-way hash, and only so that ten reports of one bug from one person are not mistaken for ten people. You can turn crash reporting off permanently the first time you are asked, or later in <strong>Settings &#9656; General</strong>.</p>
+
+  <h2>Buying</h2>
+  <p>Payment is handled by <a href="https://polar.sh">Polar</a>, who are the merchant of record and hold the payment details. Grapha never sees a card number. Unlocking checks your licence key once; after that the app never contacts the licence service again.</p>
+
+  <h2>Analytics</h2>
+  <p>There are none. No telemetry, no usage tracking, no session recording, no third-party scripts on this website.</p>
+
+  <h2>Getting in touch</h2>
+  <p><a href="mailto:prince.harshan@gmail.com">prince.harshan@gmail.com</a></p>
+</div>
+</body>
+</html>

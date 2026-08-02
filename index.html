@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grapha — markdown notes your agents can work in</title>
+<meta name="description" content="A native Mac notes app. Write markdown in a folder on your Mac; label a document and Claude, Codex or Cursor can read it, comment in the margin and suggest edits you accept or reject. Free to write, $149 once for the agents.">
+<link rel="canonical" href="https://grapha.ai/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0C0E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grapha">
+<!-- The social title is the headline, because it is read directly beneath the
+     card, which now carries that same sentence in Lora. `<title>` above stays
+     the keyword-bearing one: it is what a search result shows, with no image
+     next to it to disagree with. -->
+<meta property="og:title" content="Where plans get made. And then get done.">
+<meta property="og:description" content="Write in plain markdown on your Mac. Label a document and your coding agent can read it, comment in the margin, and suggest edits you accept or reject.">
+<meta property="og:image" content="https://grapha.ai/og.png">
+<meta property="og:url" content="https://grapha.ai/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="fonts/OpenRunde-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/OpenRunde-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Lora-roman-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Grapha",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "macOS 14",
+  "description": "A native Mac notes app. Markdown files on your disk, coding agents in the margin, and nothing to file.",
+  "offers": {
+    "@type": "Offer",
+    "price": "149",
+    "priceCurrency": "USD",
+    "description": "One payment. Free to write forever; the key unlocks the agents."
+  }
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="grapha-wordmark" viewBox="0 0 804 199">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M182.328 21.8473C185.977 25.4969 185.837 31.8187 181.998 36.6606L151.842 74.7017C148.225 79.2641 149.75 85.2522 154.774 86.2173L190.325 93.0461C196.08 94.1515 199.072 99.8552 197.091 105.945L193.588 116.712C191.731 122.421 186.092 126.608 180.443 126.473L136.043 125.412C131.259 125.298 126.787 129.75 126.876 134.539L127.733 180.944C127.838 186.608 123.611 192.236 117.888 194.056L107.163 197.467C101.055 199.409 95.3732 196.355 94.3269 190.566L87.6107 153.408C86.695 148.342 80.6898 146.768 76.0992 150.39L39.1223 179.566C34.2822 183.385 27.9773 183.517 24.3354 179.875L16.7342 172.274C13.0879 168.627 13.2246 162.313 17.0547 157.472L46.8165 119.853C50.4278 115.289 48.8975 109.305 43.873 108.344L7.38451 101.366C1.62463 100.264 -1.37145 94.5586 0.610627 88.4657L4.11006 77.7084C5.96738 71.999 11.6076 67.8114 17.2569 67.9475L61.822 69.0208C66.5868 69.1356 71.0475 64.7194 70.9913 59.943L70.4871 17.0614C70.4207 11.4185 74.638 5.83369 80.333 4.02281L91.1473 0.584066C97.2463 -1.35531 102.922 1.68673 103.98 7.46199L110.28 41.8691C111.208 46.9343 117.225 48.4932 121.81 44.856L159.937 14.6071C164.779 10.7654 171.104 10.6232 174.755 14.274L182.328 21.8473Z" fill="#FF4500"/>
+    <path d="M287.104 171.604C273.712 171.604 263.11 165.714 255.298 153.934C247.61 142.154 243.766 124.67 243.766 101.482C243.766 86.23 245.378 73.024 248.602 61.864C251.826 50.704 256.91 42.086 263.854 36.01C270.922 29.934 280.036 26.896 291.196 26.896C299.752 26.896 306.882 28.88 312.586 32.848C318.29 36.692 322.63 42.024 325.606 48.844C328.401 54.8811 330.137 61.775 330.815 69.5257C330.944 71.0012 329.93 72.3205 328.481 72.6272L308.955 76.7604C307.151 77.1423 305.437 75.82 305.266 73.9836C304.941 70.5037 304.405 67.2698 303.658 64.282C302.79 60.19 301.302 56.904 299.194 54.424C297.21 51.944 294.234 50.704 290.266 50.704C285.058 50.704 281.152 53.06 278.548 57.772C275.944 62.484 274.208 68.746 273.34 76.558C272.472 84.246 272.038 92.678 272.038 101.854C272.038 107.558 272.224 113.2 272.596 118.78C272.968 124.236 273.774 129.196 275.014 133.66C276.254 138 278.114 141.534 280.594 144.262C283.198 146.866 286.608 148.168 290.824 148.168C295.04 148.168 298.326 147.052 300.682 144.82C303.162 142.464 304.898 139.612 305.89 136.264C307.006 132.916 307.564 129.692 307.564 126.592V122.152C307.564 120.495 306.22 119.152 304.564 119.152H293.85C292.045 119.152 290.649 117.57 290.873 115.78L292.727 100.948C292.915 99.4466 294.191 98.32 295.704 98.32H329.116C330.772 98.32 332.116 99.6631 332.116 101.32V166.371C332.116 167.876 331.001 169.148 329.509 169.345L322.216 170.31C320.664 170.516 319.216 169.493 318.889 167.962L317.691 162.352C317.102 159.593 312.998 158.897 311.073 160.959C309.279 162.883 307.179 164.695 304.774 166.396C299.814 169.868 293.924 171.604 287.104 171.604Z" fill="currentColor"/>
+    <path d="M410.927 171.005C409.428 171.549 407.764 170.825 407.142 169.356L385.219 117.633C384.749 116.524 383.662 115.804 382.457 115.804H375.168C373.511 115.804 372.168 117.147 372.168 118.804V166C372.168 167.657 370.825 169 369.168 169H347.826C346.169 169 344.826 167.657 344.826 166V32.5C344.826 30.8431 346.169 29.5 347.826 29.5H379.794C394.922 29.5 406.702 32.972 415.134 39.916C423.566 46.736 427.782 57.586 427.782 72.466C427.782 80.402 426.108 87.408 422.76 93.484C419.938 98.8033 415.975 103.22 410.871 106.733C409.617 107.597 409.098 109.225 409.725 110.612L432.027 159.911C432.747 161.503 431.96 163.371 430.317 163.967L410.927 171.005ZM372.168 91.042C372.168 92.6988 373.511 94.042 375.168 94.042H378.492C384.444 94.042 389.528 92.306 393.744 88.834C398.084 85.362 400.254 79.968 400.254 72.652C400.254 64.592 398.27 59.012 394.302 55.912C390.334 52.812 385.064 51.262 378.492 51.262H375.168C373.511 51.262 372.168 52.6051 372.168 54.262V91.042Z" fill="currentColor"/>
+    <path d="M500.502 171.35C498.984 171.495 497.599 170.478 497.282 168.986L492.389 145.896C492.095 144.51 490.872 143.518 489.454 143.518H464.478C463.012 143.518 461.762 144.576 461.519 146.021L458.082 166.497C457.839 167.942 456.588 169 455.123 169H434.374C432.473 169 431.052 167.255 431.436 165.393L458.711 33.2975C458.973 32.03 460.018 31.0733 461.303 30.9241L490.144 27.578C491.664 27.4016 493.073 28.398 493.414 29.8901L524.419 165.67C524.822 167.435 523.581 169.152 521.778 169.324L500.502 171.35ZM477.563 65.77C477.235 64.0167 474.713 64.0464 474.426 65.8069L474.401 65.956L464.833 117.276C464.489 119.122 465.905 120.826 467.782 120.826H484.706C486.595 120.826 488.013 119.102 487.65 117.249L477.563 65.77Z" fill="currentColor"/>
+    <path d="M532.845 169C531.188 169 529.845 167.657 529.845 166V32.5C529.845 30.8431 531.188 29.5 532.845 29.5H562.953C579.445 29.5 591.907 33.22 600.339 40.66C608.895 47.976 613.173 58.826 613.173 73.21C613.173 87.718 608.833 98.878 600.153 106.69C591.597 114.378 579.197 118.222 562.953 118.222H560.187C558.53 118.222 557.187 119.565 557.187 121.222V166C557.187 167.657 555.844 169 554.187 169H532.845ZM557.187 92.53C557.187 94.1869 558.53 95.53 560.187 95.53H564.999C571.695 95.53 576.841 93.67 580.437 89.95C584.033 86.106 585.831 80.712 585.831 73.768C585.831 59.384 578.887 52.192 564.999 52.192H560.187C558.53 52.192 557.187 53.5351 557.187 55.192V92.53Z" fill="currentColor"/>
+    <path d="M623.266 169C621.609 169 620.266 167.657 620.266 166V32.5C620.266 30.8431 621.609 29.5 623.266 29.5H644.608C646.265 29.5 647.608 30.8431 647.608 32.5V86.764C647.608 88.4208 648.951 89.764 650.608 89.764H673.996C675.653 89.764 676.996 88.4208 676.996 86.764V32.5C676.996 30.8431 678.339 29.5 679.996 29.5H701.338C702.995 29.5 704.338 30.8431 704.338 32.5V166C704.338 167.657 702.995 169 701.338 169H679.996C678.339 169 676.996 167.657 676.996 166V115.456C676.996 113.799 675.653 112.456 673.996 112.456H650.608C648.951 112.456 647.608 113.799 647.608 115.456V166C647.608 167.657 646.265 169 644.608 169H623.266Z" fill="currentColor"/>
+    <path d="M778.848 171.35C777.33 171.495 775.945 170.478 775.628 168.986L770.735 145.896C770.442 144.51 769.218 143.518 767.801 143.518H742.824C741.359 143.518 740.108 144.576 739.865 146.021L736.428 166.497C736.185 167.942 734.934 169 733.469 169H712.72C710.819 169 709.398 167.255 709.782 165.393L737.057 33.2975C737.319 32.03 738.364 31.0733 739.649 30.9241L768.49 27.578C770.01 27.4016 771.419 28.398 771.76 29.8901L802.765 165.67C803.168 167.435 801.927 169.152 800.125 169.324L778.848 171.35ZM755.909 65.77C755.581 64.0167 753.059 64.0464 752.772 65.8069L752.747 65.956L743.179 117.276C742.835 119.122 744.251 120.826 746.128 120.826H763.053C764.941 120.826 766.36 119.102 765.997 117.249L755.909 65.77Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<!-- is-on in the markup so a script failure still shows a page. -->
+<div id="e">
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="nav-hold">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Grapha">
+        <svg class="wm" viewBox="0 0 804 199" role="img" aria-label="Grapha"><use href="#grapha-wordmark"/></svg>
+      </a>
+      <div class="nav-links">
+        <a href="#e-agents">Agents</a>
+        <a href="#e-details">Details</a>
+        <a href="#e-price">Pricing</a>
+      </div>
+      <a class="cta" href="#e-price">Download <span aria-hidden="true">&rarr;</span></a>
+    </nav>
+  </div>
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="wrap">
+      <h1>Where plans get made.<br>And then get done.</h1>
+      <p class="sub">
+        A native Mac notes app. Plain markdown in a folder you own, and the
+        coding agent you already pay for working inside the document &mdash;
+        commenting, editing, waiting for your yes.
+      </p>
+      <div class="buttons">
+        <a class="cta" href="#e-price">
+          <svg class="os" width="13" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg>
+          Download for macOS
+        </a>
+        <span class="fine">Free to write &middot; no account</span>
+      </div>
+    </div>
+
+    <!--
+      The product, drawn to the app's own measurements rather than sketched:
+      the 8px grey frame on all four sides, the traffic lights landing ON the
+      white card, the Esc pill at 20/28 inside it, a 660px Lora reading column,
+      the 40px bottom bar at 10px/0.12em, and the 360px comments panel sitting
+      in the grey the canvas floats on. Numbers from `editor/src/host/host.css`
+      and `Grapha/UI/GraphaDesign.swift`, not from a screenshot.
+    -->
+    <div class="stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="app-hold">
+        <div class="app">
+          <span class="app-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+          <div class="app-row">
+            <div class="app-card">
+              <span class="app-esc">Esc</span>
+              <div class="app-scroll">
+                <div class="app-col">
+                  <h1>Launch plan</h1>
+                  <p>
+                    We are shipping to people who already have an agent open in
+                    another window. That is the whole audience, and it is
+                    <span class="chip-metric">4,180</span> people on the list
+                    this morning<span class="caret-pill"></span>
+                  </p>
+                  <p>
+                    The pitch is one sentence: <span class="sel">your notes are
+                    a place your agent can work</span>, and the file is still
+                    just a file.
+                  </p>
+                  <ul>
+                    <li>Ship the page, then the download</li>
+                    <li>Guide seeds itself on first launch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="app-bar">
+                <span class="bi">Lock-in</span>
+                <span class="bsep">&bull;</span>
+                <span class="bpill lp-violet">LAUNCH</span>
+                <span class="bgrow"></span>
+                <span class="bi">Serif</span>
+                <span class="bsep">&bull;</span>
+                <span class="bi bnum">100%</span>
+              </div>
+            </div>
+
+            <div class="app-panel">
+              <div class="pcard">
+                <div class="ptype">Comment</div>
+                <div class="pquote">Ship the download, then the page</div>
+                <div class="pwho">
+                  <span class="mark mark-claude"></span>
+                  <span class="pname">Claude</span>
+                  <span class="pwhen">2 min ago</span>
+                </div>
+                <p class="pbody">
+                  These are the wrong way round. The page is what people send
+                  each other &mdash; the download is what they do after.
+                </p>
+                <div class="pacts">
+                  <button class="pbtn">Reply</button>
+                  <button class="pbtn">Resolve</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── The loop ──────────────────────────────────────────────────────────
+       The product's own sentence, and the thing the page was missing: not that
+       an agent can read your notes, but that a plan you left rough is further
+       along when you come back. Everything drawn here is shipped behaviour —
+       tended labelled docs, anchored questions, instruments, review hunks.
+  -->
+  <section id="e-loop" class="tinted">
+    <div class="wrap">
+      <p class="eyebrow">Write &rarr; Crystalize &rarr; Do &rarr; Review</p>
+      <h2 style="max-width:19ch">You leave a rough plan. You come back to a better one.</h2>
+      <p class="lead" style="max-width:58ch">
+        A label is the whole setup. Put one on a document and it gets tended:
+        between your visits the agent reads what you wrote and the rest of that
+        label&rsquo;s notes, then leaves its work in the margin. Your prose is
+        never touched until you say yes.
+      </p>
+
+      <ol class="loop">
+        <li>
+          <span class="step">Write</span>
+          <h4>Put down the rough version.</h4>
+          <p>No template, no folder, no fields. A title and whatever you actually think.</p>
+          <div class="lstage">
+            <div class="lrough">
+              <b>Lisbon in October</b>
+              <div>&bull; somewhere walkable</div>
+              <div>&bull; two weeks, or ten days</div>
+              <div>&bull; budget &mdash; no idea yet</div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <span class="step">Crystalize</span>
+          <h4>It asks the question you skipped.</h4>
+          <p>One or two, anchored to the sentence that needs them. Not a chat window asking how it can help.</p>
+          <div class="lstage">
+            <div class="lcomment">
+              <span class="mark mark-claude"></span>
+              <div>
+                <div class="lname">Claude</div>
+                <p>You haven&rsquo;t picked dates, and everything else hangs on
+                that &mdash; the flights, the apartment, whether the ferry is
+                still running.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <span class="step">Do</span>
+          <h4>It does the legwork and checks things off.</h4>
+          <p>Research with its sources, a figure pulled from your own database, and a next step you can actually press.</p>
+          <div class="lstage">
+            <ul class="ltodo">
+              <li class="done"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg>Shortlist walkable neighbourhoods</li>
+              <li class="done"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg>Compare flight prices, 3 sources</li>
+              <li><span class="box"></span>Pick dates</li>
+            </ul>
+            <div class="linstr">
+              <span class="lfact">&euro;1,240 left of &euro;1,800</span>
+              <span class="lbar"><i style="width:31%"></i></span>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <span class="step">Review</span>
+          <h4>Every line of it is yours to refuse.</h4>
+          <p>Changes arrive as hunks. A no puts your sentence back exactly as you wrote it &mdash; and it works even when the editing happened in a terminal.</p>
+          <div class="lstage">
+            <div class="lhunk">
+              <div class="row del"><span class="mk">&minus;</span><span class="tx">two weeks, or ten days</span></div>
+              <div class="row add"><span class="mk">+</span><span class="tx">10&ndash;19 October, nine nights</span></div>
+              <div class="foot">
+                <span class="src"><span class="mark mark-claude"></span> Claude</span>
+                <span class="grow"></span>
+                <button class="mini">Reject</button>
+                <button class="mini ok">Accept</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <p class="loop-foot">
+        Every visit, the plan is further along than you left it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Agents ────────────────────────────────────────────────────────── -->
+  <!-- ── The boundary ──────────────────────────────────────────────────
+       Was a second copy of the review hunk, which the loop's Review card now
+       carries. This section earns its place on the one claim the loop doesn't
+       make: what the agent is NOT handed.
+  -->
+  <section id="e-agents">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">The boundary</p>
+          <h2>It reads the documents you label. Nothing else.</h2>
+          <p class="lead">
+            A label is permission. Put one on a document and your agents may
+            read it; leave it off and they cannot. That is not a polite
+            instruction in a prompt &mdash; it is enforced where the files are
+            handed over, the same place the database connections are made
+            read-only.
+          </p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span><b>Unlabelled is invisible.</b> Not read, not summarised, not indexed, not sent.</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span><b>You can see the scope of any run.</b> Which documents were in it, and what came back.</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span><b>Nothing goes through us.</b> Your agent runs on your Mac, on your own subscription. There is no Grapha server to send it to.</span></li>
+          </ul>
+        </div>
+        <div class="tilt r" style="--halo:rgba(122,92,255,.26)">
+          <div class="scope">
+            <div class="scope-head">
+              <span class="mark mark-claude"></span> Claude was handed
+            </div>
+            <div class="scope-row"><span class="label-pill lp-violet">LAUNCH</span><span class="fn">launch-plan.md</span></div>
+            <div class="scope-row"><span class="label-pill lp-violet">LAUNCH</span><span class="fn">pricing-again.md</span></div>
+            <div class="scope-row"><span class="label-pill lp-sun">READING</span><span class="fn">reading-list.md</span></div>
+            <div class="scope-sep">and never saw</div>
+            <div class="scope-row off"><span class="nolabel">no label</span><span class="fn">salary-review.md</span></div>
+            <div class="scope-row off"><span class="nolabel">no label</span><span class="fn">house-offer.md</span></div>
+          </div>
+          <div style="margin-top:16px;display:flex;justify-content:center">
+            <span class="whisper"><svg class="spiral" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/></svg> Tending three documents labelled <b style="font-weight:600">LAUNCH</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Files ─────────────────────────────────────────────────────────── -->
+  <section id="e-files" style="padding-top:0">
+    <div class="wrap">
+      <div class="split flip">
+        <div>
+          <p class="eyebrow">No lock-in</p>
+          <h2>Your folder is the app.</h2>
+          <p class="lead">
+            Each note is a markdown file sitting next to its own images and its
+            own history. Open it in Vim, put it in git, back it up, or delete
+            Grapha. The writing does not move.
+          </p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>No proprietary format, and no database to export from.</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>Charts and diagrams are text too, so they read without the app.</span></li>
+          </ul>
+        </div>
+        <div class="tilt l" style="--halo:rgba(23,184,119,.24)">
+          <div class="files">
+            <span class="dim">~/</span><b>Grapha/</b><br>
+            &nbsp;&nbsp;<b>launch-plan/</b><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>note.md</b> <span class="dim">&larr; the whole thing</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;meta.json<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;comments.json<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;history/<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;assets/<br>
+            &nbsp;&nbsp;<b>pricing-again/</b><br>
+            &nbsp;&nbsp;<b>reading-list/</b><br>
+            &nbsp;&nbsp;<span class="dim">connections.json</span><br>
+            &nbsp;&nbsp;<span class="dim">AGENTS.md</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Live data ─────────────────────────────────────────────────────── -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Live data</p>
+          <h2>The number in the sentence comes from your database.</h2>
+          <p class="lead">
+            Connect Postgres, MySQL, SQLite, Mongo or Redis and a figure in your
+            prose is a real query. Your Mac runs it, read-only, with the
+            password in the Keychain. The agent writes the SQL and never sees a
+            credential.
+          </p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>The last value stays written in the file, so the note reads with no app and no connection.</span></li>
+          </ul>
+        </div>
+        <div class="tilt r" style="--halo:rgba(0,134,252,.26)">
+          <div class="frame">
+            <div style="background:var(--app-surface);padding:24px 26px 20px">
+              <p style="font-family:var(--font-prose);font-size:var(--t-17);line-height:1.65">
+                Churn held at <span class="chip-metric">2.4%</span> through the
+                quarter, which is <span class="chip-metric">0.6pt</span> better
+                than the plan and the only line in this document nobody argued
+                about.
+              </p>
+              <div class="chart" style="margin-top:20px;border:0;padding:0;background:transparent">
+                <div class="bars">
+                  <i style="height:38%;background:var(--sp-blue);animation-delay:.02s"></i>
+                  <i style="height:52%;background:var(--sp-coral);animation-delay:.06s"></i>
+                  <i style="height:44%;background:var(--sp-green);animation-delay:.1s"></i>
+                  <i style="height:66%;background:var(--sp-violet);animation-delay:.14s"></i>
+                  <i style="height:59%;background:var(--sp-sun);animation-delay:.18s"></i>
+                  <i style="height:81%;background:var(--sp-sky);animation-delay:.22s"></i>
+                  <i style="height:74%;background:var(--sp-pink);animation-delay:.26s"></i>
+                  <i style="height:96%;background:var(--sp-blue);animation-delay:.3s"></i>
+                </div>
+                <div class="axis"><span>Jan</span><span>Aug</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Details ───────────────────────────────────────────────────────── -->
+  <section id="e-details" class="tinted">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--sp-coral)">Details</p>
+      <h2 style="max-width:18ch">Small things, done tastefully.</h2>
+      <p style="margin-top:16px;font-size:var(--t-17);color:var(--ink-2);max-width:46ch">
+        None of it is on the box.
+      </p>
+      <div class="details">
+        <div class="dcard">
+          <h4>Lock in</h4>
+          <p>One key takes the app full screen and removes everything that isn&rsquo;t the sentence you are writing. Esc brings it all back.</p>
+          <div class="stagealt lockin">
+            <span class="li-line">the best thinking tool is one you<br>barely notice</span>
+            <span class="li-esc">Esc</span>
+          </div>
+        </div>
+        <div class="dcard">
+          <h4>Markdown as you type</h4>
+          <p>Type <span class="u-mono">#&nbsp;</span> and it becomes a heading. Type <span class="u-mono">-&nbsp;</span> and it becomes a bullet. The file underneath is what you would have written by hand.</p>
+          <div class="stagealt" style="align-items:flex-start">
+            <div style="width:100%;font-family:var(--font-prose);font-size:var(--t-15);line-height:1.7">
+              <div style="color:var(--ink-3)"><span class="u-mono" style="font-size:12px">##&nbsp;</span>Second thoughts</div>
+              <div style="font-size:var(--t-21);font-weight:600;letter-spacing:-0.02em">Second thoughts</div>
+            </div>
+          </div>
+        </div>
+        <div class="dcard">
+          <h4>The agent whispers</h4>
+          <p>Work in progress is one quiet line in the corner. No modal, no toast stack, no badge counting things at you.</p>
+          <div class="stagealt">
+            <span class="whisper"><svg class="spiral" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/></svg> Reading four documents labelled <b style="font-weight:600">LAUNCH</b></span>
+          </div>
+        </div>
+        <div class="dcard">
+          <h4>Sound you can switch off</h4>
+          <p>Mechanical keys, with a different sample for space, return and delete. Four ambient loops for lock-in. All of it off by default.</p>
+          <div class="stagealt">
+            <div style="display:flex;gap:6px;align-items:flex-end;height:44px">
+              <i style="width:7px;height:40%;background:var(--sp-coral);border-radius:3px;display:block"></i>
+              <i style="width:7px;height:78%;background:var(--sp-coral);border-radius:3px;display:block"></i>
+              <i style="width:7px;height:54%;background:var(--sp-coral);border-radius:3px;display:block"></i>
+              <i style="width:7px;height:96%;background:var(--sp-coral);border-radius:3px;display:block"></i>
+              <i style="width:7px;height:62%;background:var(--sp-coral);border-radius:3px;display:block"></i>
+              <i style="width:7px;height:34%;background:var(--sp-coral);border-radius:3px;display:block"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Price ─────────────────────────────────────────────────────────── -->
+  <section id="e-price">
+    <div class="wrap" style="text-align:center">
+      <p class="eyebrow">Buy once, own forever</p>
+      <h2 style="max-width:20ch;margin-inline:auto">Free to write. $149 for the agents.</h2>
+      <div class="price">
+        <div class="amount">$149</div>
+        <div class="once">once &mdash; not a year, not a month</div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>Unlimited notes, labels, charts, diagrams and databases &mdash; free forever, no key needed</span></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>Agents free for 30 days from your first run, then unlocked by the key</span></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>Two Macs, with a button to release one when you sell it</span></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4 6.2 11.6 13 4.8"/></svg><span>Checked once at unlock, then never again. It works offline forever</span></li>
+        </ul>
+        <a class="cta" href="#top">Download for macOS</a>
+        <p class="fine">Apple silicon &middot; macOS 14 and later &middot; no account</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────────────────────────────── -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2 style="text-align:center">Frequently asked</h2>
+      <div class="faq">
+        <details open>
+          <summary><span class="grow">Do I need a Claude or ChatGPT plan too?</span><svg class="pm" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></summary>
+          <p>Yes. Grapha drives the agent you already have, on your own subscription or API key. We do not resell tokens, which is what lets the app cost one payment instead of a monthly fee.</p>
+        </details>
+        <details>
+          <summary><span class="grow">What happens on day 31?</span><svg class="pm" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></summary>
+          <p>The agents go quiet. Everything else keeps working: every note, label, chart, diagram, database and the whole editor. Nothing you wrote goes anywhere.</p>
+        </details>
+        <details>
+          <summary><span class="grow">How is this different from Obsidian with a plugin?</span><svg class="pm" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></summary>
+          <p>Two things. Review: an agent&rsquo;s work arrives as hunks you accept or reject against a snapshot of the file, so it works whichever tool did the editing. And live data: a figure in your prose can be a real query against your own database, cached into the file so it still reads without either.</p>
+        </details>
+        <details>
+          <summary><span class="grow">Can an agent read notes I didn&rsquo;t mean to share?</span><svg class="pm" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></summary>
+          <p>No. It is handed the documents carrying the label you gave it and nothing else. Everything unlabelled is invisible to it, and you can see which documents were in scope for any run.</p>
+        </details>
+        <details>
+          <summary><span class="grow">What happens if you disappear?</span><svg class="pm" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></summary>
+          <p>Nothing changes. Your notes are markdown in <span class="u-mono">~/Grapha</span>, and the licence is checked once at unlock and never again, so nobody can switch the app off remotely.</p>
+        </details>
+        <details>
+          <summary><span class="grow">Windows or iPhone?</span><svg class="pm" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></summary>
+          <p>Mac only. Your notes are ordinary markdown files, so any app on your phone that reads markdown will read them today.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="end tinted">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <h2>Try it on one document.</h2>
+      <p>Free to write, forever. Thirty days of agents from your first run.</p>
+      <div class="buttons">
+        <a class="cta" href="#e-price">
+          <svg class="os" width="13" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg>
+          Download for macOS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="fbrand">
+        <a class="brand" href="#top" aria-label="Grapha">
+          <svg class="wm" viewBox="0 0 804 199" role="img" aria-label="Grapha"><use href="#grapha-wordmark"/></svg>
+        </a>
+      </div>
+      <div class="fbot"><span>&copy; 2026 Grapha</span><span class="grow"></span><a href="privacy.html">Privacy</a></div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

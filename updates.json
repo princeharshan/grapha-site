@@ -1,0 +1,27 @@
+{
+  "_readme": [
+    "Hand-edited, by a person, in a repo. The app reads `schema`, `latest` and",
+    "`announcements` and ignores every other key, including this one.",
+    "`build` MUST be a whole number. A quoted \"12\" is accepted, but anything that",
+    "is not an integer (\"twelve\", 12.5) drops `latest` entirely, and the app then",
+    "tells everyone it is up to date while it is not.",
+    "You do NOT have to write an announcement for a release. Leave `announcements`",
+    "alone and the app builds the update notice out of `latest` itself, using",
+    "`notes` as its sentence. Write your own entry only when you want different",
+    "words: give it \"kind\": \"update\" and the same \"build\" as `latest`, and it",
+    "replaces the generated one.",
+    "A \"news\" entry MUST carry \"expires\": \"YYYY-MM-DD\", or it is dropped — with no",
+    "version to outgrow it would nag forever.",
+    "Rolling back a bad release: point `latest` at the previous build. Every copy",
+    "of the app retires the notice on its next launch.",
+    "Spec: docs/superpowers/specs/2026-07-30-announcements-design.md"
+  ],
+  "schema": 1,
+  "latest": {
+    "version": "0.1",
+    "build": 1,
+    "url": "https://grapha.agency/#download",
+    "notes": "Not released yet."
+  },
+  "announcements": []
+}
