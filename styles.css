@@ -872,7 +872,6 @@ p { margin: 0; text-wrap: pretty; }
 }
 #e .buttons { display: flex; justify-content: center; align-items: center; gap: 14px;
   margin-top: 34px; flex-wrap: wrap; }
-#e .buttons .fine { font-size: var(--t-15); color: var(--ink-3); }
 
 /* ── The stage: the product, drawn to the app's own measurements ────────── */
 
@@ -1416,7 +1415,10 @@ p { margin: 0; text-wrap: pretty; }
   #e .hero > .wrap h1 { text-wrap: balance; max-width: 15ch; font-size: clamp(34px, 9.5vw, 44px); }
   #e .sub { font-size: var(--t-17); }
   #e section { padding: 52px 0; }
-  #e .buttons { flex-direction: column; align-items: center; gap: 12px; }
+  /* Two full-width buttons stacked, not two shrink-wrapped ones centred: on a
+     phone the tap target is the whole row or it is a guess. */
+  #e .buttons { flex-direction: column; align-items: stretch; }
+  #e .buttons .cta, #e .buttons .cta-quiet { justify-content: center; }
   #e .end { padding: 76px 0; }
   #e .app-esc { display: none; }
   #e .app-row { height: 340px; }
