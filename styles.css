@@ -842,21 +842,23 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 
-#e .hero { position: relative; padding: 86px 0 0; text-align: center; overflow: hidden; }
-/* D's hero proportions, restored once the sticker cluster came out (owner,
-   2026-08-02): with nothing flanking the headline it can take the whole width,
-   so it goes back to D's fluid 46-88px over a 13ch measure. B's smaller 60px
-   existed only to leave room for the stickers.
+#e .hero { position: relative; padding: 64px 0 0; text-align: center; overflow: hidden; }
+/* Three lines, and smaller than D's (owner, 2026-08-02: "the display font and
+   the hero section is a little too large"). D's fluid 46-88px was drawn for a
+   headline that took the full width in two lines; over three lines the same
+   size becomes a wall, so the ceiling comes down to 60px and the block gets
+   its height back from the extra line rather than from the type.
 
    Scoped to the hero's own column, because an unscoped `#e h1` also matched the
    H1 inside the product mock and centred a document title that the app draws
    hard against the reading column's left edge. */
 #e .hero > .wrap h1 {
   margin: 0 auto;
-  /* Two sentences, two lines — the break is authored, not left to a measure
-     that would split "And then they / get done." */
+  /* Both breaks are authored. A measure would split on the sentence boundary —
+     "Where plans get made. / And then get done." is two lines, not three — and
+     nothing about a 3-line hero is discoverable by wrapping. */
   max-width: 24ch;
-  font-size: clamp(34px, 6.2vw, 84px);
+  font-size: clamp(32px, 4.4vw, 60px);
   text-wrap: nowrap;
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -1409,10 +1411,12 @@ p { margin: 0; text-wrap: pretty; }
 }
 
 @media (max-width: 620px) {
-  /* The authored break stays (it separates two sentences); what goes is the
-     `nowrap` that kept each sentence on one line — on a phone the second one
-     is 23 characters and would have to shrink to about 28px to fit. */
+  /* Both authored breaks go, along with the `nowrap` that kept each line whole.
+     They are a desktop composition — a 15ch phone measure already breaks
+     "get made. And then" on its own, so honouring the breaks too would stack
+     the headline five or six lines deep. `balance` does the work here. */
   #e .hero > .wrap h1 { text-wrap: balance; max-width: 15ch; font-size: clamp(34px, 9.5vw, 44px); }
+  #e .hero > .wrap h1 br { display: none; }
   #e .sub { font-size: var(--t-17); }
   #e section { padding: 52px 0; }
   /* Two full-width buttons stacked, not two shrink-wrapped ones centred: on a

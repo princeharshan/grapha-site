@@ -78,7 +78,12 @@
   <!-- ── Hero ──────────────────────────────────────────────────────────── -->
   <header class="hero">
     <div class="wrap">
-      <h1>Where plans get made.<br>And then get done.</h1>
+      <!-- The spaces before each <br> are load-bearing: the phone breakpoint
+           hides the breaks and lets `text-wrap: balance` re-wrap, and without
+           them the words would weld into "Where plansget made." A space
+           immediately before a forced break is trimmed at the line end, so it
+           costs the desktop composition nothing. -->
+      <h1>Where plans <br>get made. And then <br>get done.</h1>
       <p class="sub">
         A native Mac notes app. Plain markdown in a folder you own, and the
         coding agent you already pay for working inside the document &mdash;
