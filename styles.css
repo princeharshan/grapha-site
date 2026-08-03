@@ -852,7 +852,9 @@ p { margin: 0; text-wrap: pretty; }
    than D's 86px, not less, even though the type came down. A big headline can
    sit near the nav and still read as the top of the page; a smaller one needs
    the gap to say the same thing. */
-#e .hero { position: relative; padding: 104px 0 0; text-align: center; overflow: hidden; }
+/* 136px is 104 + 30% (owner, 2026-08-03), rounded to the 4px grid the rest of
+   this sheet sits on. The phone value below moves by the same 30%. */
+#e .hero { position: relative; padding: 136px 0 0; text-align: center; overflow: hidden; }
 /* Three lines, and smaller than D's (owner, 2026-08-02: "the display font and
    the hero section is a little too large" — then, at 60px, "a little too
    small"). D's fluid 46-88px was drawn for a headline that took the full width
@@ -865,9 +867,10 @@ p { margin: 0; text-wrap: pretty; }
    hard against the reading column's left edge. */
 #e .hero > .wrap h1 {
   margin: 0 auto;
-  /* Both breaks are authored. A measure would split on the sentence boundary —
-     "Where plans get made. / And then get done." is two lines, not three — and
-     nothing about a 3-line hero is discoverable by wrapping. */
+  /* The break is authored, on the sentence boundary: two lines, one sentence
+     each. `nowrap` below means the measure never adds a break of its own, so
+     this is the only one — and the phone breakpoint drops it and re-balances.
+     24ch still clears the longer line ("Where plans get made." is 21). */
   max-width: 24ch;
   font-size: clamp(34px, 5.1vw, 70px);
   text-wrap: nowrap;
@@ -1402,7 +1405,7 @@ p { margin: 0; text-wrap: pretty; }
   #e .loop { grid-template-columns: 1fr; }
   #e .nav-links { display: none; }
   #e section { padding: 68px 0; }
-  #e .hero { padding-top: 56px; }
+  #e .hero { padding-top: 72px; }   /* 56 + 30%, to the same grid */
   #e .stage { margin-top: 44px; padding-bottom: 84px; }
   #e .app-hold { transform: rotateX(3deg); }
   #e .app-row { height: 460px; }

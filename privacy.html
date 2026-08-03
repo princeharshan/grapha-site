@@ -35,10 +35,17 @@
   <h1>Privacy</h1>
 
   <h2>Your notes</h2>
-  <p>Your notes are Markdown files in a folder on your Mac. Grapha has no server, no account, and no sync. Nothing you write is uploaded anywhere, and there is nowhere for it to be uploaded to.</p>
+  <p>Your notes are Markdown files in a folder on your Mac. Grapha has no server, no account, and no sync. Nothing you write is uploaded to us &mdash; there is no us to upload it to. The one way note text can leave your Mac is a door you open yourself: working with an agent, described below.</p>
 
   <h2>Databases you connect</h2>
   <p>Connections are read-only and run from your Mac. Credentials are stored in the macOS Keychain and never leave it. A language model is never given a credential and never executes a query &mdash; the app runs the query locally.</p>
+
+  <h2>Agents you connect</h2>
+  <p>You can set up an AI agent &mdash; Claude, Codex, or Cursor &mdash; to work on your notes. Agents only read the notes you have labelled for them. When an agent works, those labelled notes go to the model vendor behind it, under your own key or subscription &mdash; the exchange is between your Mac and the vendor you chose, and Grapha is not in the middle of it. Notes you have not labelled are never handed to an agent, and if you never set an agent up, nothing you write leaves at all.</p>
+  <p>Adding an API key in <strong>Settings &#9656; AI</strong> makes one small request to that vendor to confirm the key works. It carries the key and nothing else.</p>
+
+  <h2>Link previews</h2>
+  <p>Hover over a link in a note and Grapha fetches that page to draw a small preview card &mdash; the same request your browser would make if you clicked. Nothing from your note travels with it beyond the address itself. You can switch previews off in <strong>Settings &#9656; General</strong>.</p>
 
   <h2>Checking for updates</h2>
   <p>Once a day, Grapha reads a single static file from this website to learn whether a newer version exists. The request carries no identifier: no account, no device id, no licence key, not even your version number. Everybody who asks gets the same file. You can switch the check off in <strong>Settings &#9656; General</strong>.</p>
