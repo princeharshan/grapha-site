@@ -6,6 +6,7 @@
 @font-face { font-family: "Lora"; src: url("fonts/Lora-roman-latin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Lora"; src: url("fonts/Lora-italic-latin.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "JetBrains Mono"; src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Freeman"; src: url("fonts/Freeman-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 
 /* Agent marks. Cursor's and Codex's are near-black, so each sits on the
    same faint neutral disc rather than a white badge — the app's own
@@ -84,6 +85,11 @@
   --font-ui:    "Open Runde", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-prose: "Lora", Georgia, serif;
   --font-mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  /* The page's display voice — the demo's chapter row, and nothing else. The
+     hero was set in this and reverted to Open Runde (owner, 2026-08-03).
+     Freeman ships ONE weight (400): anything set in it must ask for 400, or
+     the browser synthesises a bold and smears the drawing. */
+  --font-display: "Freeman", "Open Runde", -apple-system, sans-serif;
 
   /* One scale, used everywhere. */
   --t-11: 11px; --t-13: 13px; --t-15: 15px; --t-17: 17px;
@@ -1456,7 +1462,13 @@ p { margin: 0; text-wrap: pretty; }
   position: relative; z-index: 1;
   display: flex; justify-content: center; align-items: center; gap: 12px;
   margin: 0 auto 22px;
-  font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+  /* Freeman (owner, 2026-08-03) — the one place the display face is used;
+     `.dstep`/`.darr`/`.dreplay` inherit it through their `font: inherit`.
+     Freeman has one weight, so this asks for 400 rather than the 600 the row
+     carried in Open Runde — 600 would draw a synthetic bold over a face that
+     is already heavy. */
+  font-family: var(--font-display);
+  font-size: 10px; font-weight: 400; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-3);
 }
