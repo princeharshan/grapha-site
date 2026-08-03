@@ -20,8 +20,8 @@
   "latest": {
     "version": "0.1",
     "build": 1,
-    "url": "https://grapha.ai/#e-price",
-    "notes": "Not released yet."
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1/Grapha.dmg",
+    "notes": "The first release. Plain markdown files in a folder you own, and a coding agent that works in the margin."
   },
   "announcements": []
 }

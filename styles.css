@@ -947,10 +947,12 @@ p { margin: 0; text-wrap: pretty; }
 }
 
 /* macOS puts these at the window's top-left; Grapha nudges them in by 10/9, so
-   they land on the white card rather than hugging the corner. */
+   they land on the white card rather than hugging the corner. Nudged further
+   in again on the landing page (owner, 2026-08-03) — the shot is a portrait of
+   the window, not a screenshot of it, and the extra air reads as deliberate. */
 #e .app-lights {
   position: absolute; z-index: 3;
-  left: 17px; top: 16px;
+  left: 22px; top: 20px;
   display: flex; gap: 8px;
 }
 #e .app-lights i { width: 12px; height: 12px; border-radius: 50%; display: block; }
@@ -980,25 +982,30 @@ p { margin: 0; text-wrap: pretty; }
 
 #e .app-scroll { flex: 1 1 auto; min-height: 0; overflow: hidden; }
 
-/* The 660px reading measure, the user's serif voice, 17/31. The real app opens
-   a note with `leading × 6` of air above the title; the mock shows the document
-   nudged up so the bar and the panel fit in one frame. */
+/* The 660px reading measure, 17/31. The real app opens a note with
+   `leading × 6` of air above the title; the mock shows the document nudged up
+   so the bar and the panel fit in one frame.
+
+   The document is set in the app's own sans (owner, 2026-08-03) — it was Lora,
+   the cycler's SERIF, and the bar below now reads NORMAL to match. Open Runde
+   tops out at Semibold, so the title asks for 600, not the 700 it carried in a
+   400-only Lora build: 700 here would be a face the browser has to invent. */
 #e .app-col {
   max-width: 660px;
   margin: 0 auto;
   padding: 64px 24px 0;
-  font-family: var(--font-prose);
+  font-family: var(--font-ui);
   font-size: 17px;
   line-height: 31px;
   color: var(--ink);
 }
 #e .app-col > * + * { margin-top: 31px; }
 #e .app-col h1 {
-  font-family: var(--font-prose);
-  font-size: 34px; font-weight: 700;
+  font-family: var(--font-ui);
+  font-size: 34px; font-weight: 600;
   line-height: 1.3; letter-spacing: -0.011em;
 }
-#e .app-col p { font-family: var(--font-prose); }
+#e .app-col p { font-family: var(--font-ui); }
 #e .app-col ul { margin: 0; padding-left: 1.25em; }
 #e .app-col li::marker { color: var(--ink-3); }
 #e .app-col .sel { background: rgba(0, 107, 255, 0.09); border-radius: 2px; }
