@@ -30,6 +30,10 @@
      static markup below is the FINISHED demo, so a dead script still shows a
      complete product shot. -->
 <script>document.documentElement.classList.add('js')</script>
+<!-- Gives the page a keyboard and a mouse: every click and keystroke the
+     VISITOR makes. Independent of `demo.js` — the mock's auto-typing is
+     deliberately silent, and neither file can reach the other. -->
+<script src="sound.js" defer></script>
 <script src="demo.js" defer></script>
 
 <script type="application/ld+json">

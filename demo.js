@@ -107,6 +107,9 @@
         if (t !== token) return res(false);
         var p2t = $('#p2t');
         if (!p2t) return res(false);
+        /* Silent, deliberately (owner, 2026-08-03). `sound.js` gives the page a
+           keyboard and a mouse, but this loop is the PAGE typing, not the
+           visitor, and it runs forever — see that file's header. */
         p2t.textContent = ORIGINAL.slice(0, i + 1);
         if (i + 1 >= ORIGINAL.length) return res(true);
         var pause = /[,—]/.test(ORIGINAL[i]) ? 190 : 20 + Math.random() * 42;
