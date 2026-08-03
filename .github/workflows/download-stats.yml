@@ -1,0 +1,45 @@
+name: Record download numbers
+
+# Appends one row a day to data/downloads.csv: the running total across every
+# release asset, plus how many arrived since the last recorded row.
+on:
+  schedule:
+    # 07:10 UTC daily (03:10 America/New_York). Deliberately off the hour:
+    # GitHub sheds scheduled jobs hardest at :00, so an odd minute is likelier
+    # to fire on time. A missed day still loses nothing — see the script.
+    - cron: "10 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: download-stats
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch release download counts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api "repos/${GITHUB_REPOSITORY}/releases" --paginate > releases.json
+
+      - name: Record today's numbers
+        run: python3 .github/scripts/record_downloads.py < releases.json
+
+      - name: Commit if changed
+        run: |
+          rm -f releases.json
+          if git diff --quiet -- data/downloads.csv; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/downloads.csv
+          git commit -m "chore(stats): download numbers for $(date -u +%F)"
+          git push
