@@ -842,12 +842,17 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 
-#e .hero { position: relative; padding: 64px 0 0; text-align: center; overflow: hidden; }
+/* The headline wants air above it before it starts (owner, 2026-08-02) — more
+   than D's 86px, not less, even though the type came down. A big headline can
+   sit near the nav and still read as the top of the page; a smaller one needs
+   the gap to say the same thing. */
+#e .hero { position: relative; padding: 104px 0 0; text-align: center; overflow: hidden; }
 /* Three lines, and smaller than D's (owner, 2026-08-02: "the display font and
-   the hero section is a little too large"). D's fluid 46-88px was drawn for a
-   headline that took the full width in two lines; over three lines the same
-   size becomes a wall, so the ceiling comes down to 60px and the block gets
-   its height back from the extra line rather than from the type.
+   the hero section is a little too large" — then, at 60px, "a little too
+   small"). D's fluid 46-88px was drawn for a headline that took the full width
+   in two lines; over three lines the same size becomes a wall. 70px is the
+   landing point, and the block gets its height back from the extra line rather
+   than from the type.
 
    Scoped to the hero's own column, because an unscoped `#e h1` also matched the
    H1 inside the product mock and centred a document title that the app draws
@@ -858,16 +863,20 @@ p { margin: 0; text-wrap: pretty; }
      "Where plans get made. / And then get done." is two lines, not three — and
      nothing about a 3-line hero is discoverable by wrapping. */
   max-width: 24ch;
-  font-size: clamp(32px, 4.4vw, 60px);
+  font-size: clamp(34px, 5.1vw, 70px);
   text-wrap: nowrap;
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 0.98;
 }
+/* The sub follows the headline down. It was set against an 84px display and
+   left behind when that came to 70 — "it didn't shrink the body underneath in
+   proportion" (owner, 2026-08-02). 84:21 was a 4:1 ratio; 70:17 holds it, and
+   17 is on the scale where 17.5 would not be. */
 #e .sub {
   margin: 24px auto 0;
   max-width: 50ch;
-  font-size: var(--t-21);
+  font-size: var(--t-17);
   line-height: 1.45;
   color: var(--ink-2);
   letter-spacing: -0.012em;
@@ -1417,7 +1426,9 @@ p { margin: 0; text-wrap: pretty; }
      the headline five or six lines deep. `balance` does the work here. */
   #e .hero > .wrap h1 { text-wrap: balance; max-width: 15ch; font-size: clamp(34px, 9.5vw, 44px); }
   #e .hero > .wrap h1 br { display: none; }
-  #e .sub { font-size: var(--t-17); }
+  /* No phone override for `.sub` any more — it is 17px everywhere since the
+     headline came down to 70. A rule restating the value it already has reads
+     like a decision and is not one. */
   #e section { padding: 52px 0; }
   /* Two full-width buttons stacked, not two shrink-wrapped ones centred: on a
      phone the tap target is the whole row or it is a guess. */
