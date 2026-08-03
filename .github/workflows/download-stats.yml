@@ -34,12 +34,15 @@ jobs:
       - name: Commit if changed
         run: |
           rm -f releases.json
-          if git diff --quiet -- data/downloads.csv; then
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Stage before testing: `git diff` alone cannot see a file that is not
+          # yet tracked, so on the very first run it reports no change and the
+          # CSV is never committed. `--cached` after `add` sees both cases.
+          git add data/downloads.csv
+          if git diff --cached --quiet -- data/downloads.csv; then
             echo "no change"
             exit 0
           fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/downloads.csv
           git commit -m "chore(stats): download numbers for $(date -u +%F)"
           git push
