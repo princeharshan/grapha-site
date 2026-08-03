@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1",
-    "build": 1,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1/Grapha.dmg",
-    "notes": "The first release. Plain markdown files in a folder you own, and a coding agent that works in the margin."
+    "version": "0.1.2",
+    "build": 6,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.2/Grapha-0.1.2.dmg",
+    "notes": "Honest agent status, a tighter boundary for outside agents, and faster typing on long notes."
   },
   "announcements": []
 }
