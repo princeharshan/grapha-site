@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.3",
-    "build": 8,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.3/Grapha-0.1.3.dmg",
-    "notes": "Fixes a crash that could close Grapha during almost anything you did in it."
+    "version": "0.1.4",
+    "build": 9,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.4/Grapha-0.1.4.dmg",
+    "notes": "Every icon now matches, the notes stacked in the margin open into a readable list, and Settings follows macOS's own layout."
   },
   "announcements": []
 }
