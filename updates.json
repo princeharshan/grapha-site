@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.5",
-    "build": 10,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.5/Grapha-0.1.5.dmg",
-    "notes": "Paste a link and it becomes a playable card — YouTube, Spotify, X, Figma, a PDF — a crammed table now takes the room it needs, and a review shows the words that changed rather than the paragraph around them."
+    "version": "0.1.6",
+    "build": 11,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.6/Grapha-0.1.6.dmg",
+    "notes": "Diagrams and HTML blocks now ring when you select them, a link the app can't read wears the site's own mark instead of a bare address, and a note opens from Home a little quicker."
   },
   "announcements": []
 }
