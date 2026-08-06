@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.4",
-    "build": 9,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.4/Grapha-0.1.4.dmg",
-    "notes": "Every icon now matches, the notes stacked in the margin open into a readable list, and Settings follows macOS's own layout."
+    "version": "0.1.5",
+    "build": 10,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.5/Grapha-0.1.5.dmg",
+    "notes": "Paste a link and it becomes a playable card — YouTube, Spotify, X, Figma, a PDF — a crammed table now takes the room it needs, and a review shows the words that changed rather than the paragraph around them."
   },
   "announcements": []
 }
