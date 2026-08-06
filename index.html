@@ -8,7 +8,20 @@
 <link rel="canonical" href="https://grapha.ai/">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B0C0E" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Four icons, because the consumers disagree about what they will accept.
+     The SVG has been correct since the homepage shipped and Google still drew a
+     black mark from some earlier life of this domain, so the raster forms are
+     here to be found where a crawler actually looks: /favicon.ico by convention,
+     and a 192 square because Google states it wants a multiple of 48. Root-
+     absolute on purpose — a relative href resolves against /privacy.html too,
+     which works, but only by luck of both files sitting at the root.
+     apple-touch-icon is the app tile rather than the spark: iOS composites an
+     alpha channel onto black, so a transparent mark would arrive on a black
+     square. Same mark, opaque, exactly as it sits in the Dock. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Grapha">
