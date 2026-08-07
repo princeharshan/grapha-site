@@ -21,7 +21,7 @@
     "version": "0.1.7",
     "build": 12,
     "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.7/Grapha-0.1.7.dmg",
-    "notes": "⌘K has grown into the app's one control surface — commands, settings, sounds and a shortcut sheet, listed before you ask — sound is on by default now (Settings ▸ Sound turns it off), and the Grapha Guide has caught up with what the app can do."
+    "notes": "⌘K now holds every command, setting and shortcut in one place, sound is on by default (Settings ▸ Sound turns it off), and the Grapha Guide shows much more of what Grapha can do."
   },
   "announcements": []
 }
