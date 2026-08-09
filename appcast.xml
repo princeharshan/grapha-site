@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  appcast.xml — what Sparkle reads when someone presses "Check for Updates".
+
+  ⚠️ HAND-EDITED, by a person, in this repo. `scripts/release.sh` in the app
+  repo PRINTS a ready-made <item> at the end of every release and never writes
+  this file, on purpose: this is the file that decides what gets installed on
+  other people's Macs, and a script that edits it as a side effect of a build
+  can hand a wrong build to everyone while nobody is reading the output.
+
+  IT IS THE SECOND OF TWO EDITS. `updates.json` is the first — it is what the
+  Home band reads to ANNOUNCE a release. This is what Sparkle reads to INSTALL
+  one. They must move in the same push. If updates.json advertises build 14 and
+  this file still says 13, every copy of Grapha shows "0.1.9 is out", the user
+  presses Update, and Sparkle answers "You're up to date." The app contradicts
+  itself and the release is unreachable.
+
+  Two attributes are easy to swap and impossible to notice:
+
+    sparkle:version              the BUILD NUMBER (CFBundleVersion, e.g. 13).
+                                 Sparkle compares this against the running app's
+                                 build number. This is the one that decides
+                                 whether an update exists.
+    sparkle:shortVersionString   the marketing version (e.g. 0.1.8). Shown to
+                                 the user. Compared against nothing.
+
+  Put "0.1.9" in sparkle:version and it is compared against "14"; the update is
+  simply never offered, and nothing anywhere reports a problem.
+
+  The enclosure's sparkle:edSignature is taken over the exact .dmg that was
+  uploaded to the GitHub release. Sparkle verifies the bytes it downloads
+  against it, using the public key baked into Grapha-Info.plist
+  (SUPublicEDKey = Oc3YkDtBWoq4ACJglFMCu+KEFPXCSp//uRvLf7I8D/w=). Sign a
+  different copy of the file and every client rejects the update.
+
+  An appcast with no <item> is valid and simply means "no update available".
+-->
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Grapha</title>
+    <link>https://grapha.ai/appcast.xml</link>
+    <description>Updates for Grapha, a native macOS notes app.</description>
+    <language>en</language>
+
+    <!--
+      0.1.8 (build 13) is listed for completeness, and it is INERT.
+
+      It shipped on 2026-08-08, before Sparkle was added to the app, so no copy
+      of Grapha in anyone's hands can read this file yet — every installed 0.1.8
+      has no updater in it at all, and will keep getting its news from
+      updates.json and the download page. The first release Sparkle can actually
+      install is the NEXT one.
+
+      It is listed anyway because it is true: this is the current release, and
+      the signature below is over the published bytes
+      (sha256 d6149a96d889dbe234539e5526c928a8be6a7338aca4e34f9f48f1651e0d2fb5),
+      verified byte-identical to the asset GitHub is serving before it was
+      signed. A feed that says "the newest Grapha is 0.1.8, build 13" is the
+      honest state of the world; an empty one would have been honest too, and
+      this one additionally lets release-live.sh prove the file is being served
+      before the first release that depends on it.
+    -->
+    <item>
+      <title>Grapha 0.1.8</title>
+      <pubDate>Sat, 08 Aug 2026 20:31:02 -0400</pubDate>
+      <sparkle:version>13</sparkle:version>
+      <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        A chart waits for real data now instead of drawing made-up numbers, and
+        it tells you on itself when an agent is working on it. Code blocks have
+        a copy button, and pressing Enter in Find jumps to the match.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.8/Grapha-0.1.8.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="QsigA5dSf5TR5Fgp8103orNB/z5KiJx4jRaCrUsi0KaB/LHSo00iQlXJg+MlDD4wSQfQDD1phk+4z/qGBqheDQ==" length="32390813" />
+    </item>
+  </channel>
+</rss>
