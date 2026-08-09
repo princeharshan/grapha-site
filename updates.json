@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.7",
-    "build": 12,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.7/Grapha-0.1.7.dmg",
-    "notes": "⌘K now holds every command, setting and shortcut in one place, sound is on by default (Settings ▸ Sound turns it off), and the Grapha Guide shows much more of what Grapha can do."
+    "version": "0.1.8",
+    "build": 13,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.8/Grapha-0.1.8.dmg",
+    "notes": "A chart waits for real data now instead of drawing made-up numbers, and it tells you on itself when an agent is working on it. Code blocks have a copy button, and pressing Enter in Find jumps to the match."
   },
   "announcements": []
 }
