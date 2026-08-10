@@ -43,6 +43,30 @@
     <language>en</language>
 
     <!--
+      0.1.9 (build 14) — the FIRST release Sparkle can actually install, and
+      also the last one nobody can install this way. Every copy in anyone's
+      hands today is 0.1.8 or earlier and has no updater in it at all, so this
+      release still reaches people as a manual drag to Applications. From 0.1.9
+      onwards, pressing Update installs in place.
+    -->
+    <item>
+      <title>Grapha 0.1.9</title>
+      <pubDate>Sun, 09 Aug 2026 23:27:12 -0400</pubDate>
+      <sparkle:version>14</sparkle:version>
+      <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        Grapha updates itself from now on — press Update and the new version
+        installs in place, no dragging to Applications. You can also pick which
+        model each coding agent uses, choose the font and size new notes start
+        at, and the animation between Home and a doc is smooth again.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.9/Grapha-0.1.9.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="h2iCv3UBQ9Uoy2/6w2yM4LGD4Zw75W6yXrfE/JJ0eLtBZAY+l3klqv2ngCNIQ0pu0MZ7s6c4VuoekFphe6XgCg==" length="33424098" />
+    </item>
+
+    <!--
       0.1.8 (build 13) is listed for completeness, and it is INERT.
 
       It shipped on 2026-08-08, before Sparkle was added to the app, so no copy

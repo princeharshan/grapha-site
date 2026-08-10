@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.8",
-    "build": 13,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.8/Grapha-0.1.8.dmg",
-    "notes": "A chart waits for real data now instead of drawing made-up numbers, and it tells you on itself when an agent is working on it. Code blocks have a copy button, and pressing Enter in Find jumps to the match."
+    "version": "0.1.9",
+    "build": 14,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.9/Grapha-0.1.9.dmg",
+    "notes": "Grapha updates itself from now on — press Update and the new version installs in place, no dragging to Applications. You can also pick which model each coding agent uses, choose the font and size new notes start at, and the animation between Home and a doc is smooth again."
   },
   "announcements": []
 }
