@@ -42,6 +42,21 @@
     <description>Updates for Grapha, a native macOS notes app.</description>
     <language>en</language>
 
+    <item>
+      <title>Grapha 0.1.11</title>
+      <pubDate>Fri, 14 Aug 2026 13:34:01 -0400</pubDate>
+      <sparkle:version>16</sparkle:version>
+      <sparkle:shortVersionString>0.1.11</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        The swoosh when a note is deleted is back no matter which interaction
+        sound you use, and the bottom bar's labels no longer select like text.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.11/Grapha-0.1.11.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="BBsvtuB+76Ds9Zs/K7BGfoeLNNM+Nn1hGR8uo/SZgEPPw+IeDBSqXg5Z3C5nTZnc0gZlYfoekwttAW+OG9lJDA==" length="33449663" />
+    </item>
+
     <!--
       0.1.10 (build 15) — the first release that reaches anyone already on
       0.1.9 as an in-place update rather than a drag to Applications.
