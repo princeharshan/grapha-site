@@ -111,10 +111,12 @@
       window (owner, 2026-08-14) — a recording of the app can never disagree
       with the app, which the drawing eventually would.
 
-      The player is ours rather than the browser's. Stock controls are another
+      There is no control bar, on hover or otherwise (owner, 2026-08-14):
+      once it is playing the film is the only thing on screen, and a click
+      anywhere on it pauses and resumes. Stock controls would be another
       product's design language sitting inside a portrait of ours, and they
       differ per browser, so the one element the page is built around would
-      look different to every second visitor. `preload="none"` means the 18 MB
+      look different to every second visitor. `preload="none"` means the film
       travels only for a visitor who presses play — the poster is the whole
       cost of arriving. With no script the <video> keeps its own controls and
       still plays, so a dead file costs polish, not the demo.
@@ -125,14 +127,14 @@
         <div class="vframe" id="vframe">
           <video id="vfilm" class="vfilm" controls playsinline preload="none"
                  poster="demo-poster.jpg"
-                 aria-label="Grapha product overview, two minutes thirty-seven">
+                 aria-label="Grapha product overview">
             <source src="demo.mp4" type="video/mp4">
           </video>
 
           <!-- The cover: what a visitor sees before anything has loaded. It is
                a real button, so the whole poster is one large target and the
-               keyboard reaches it first. Hidden after the first play; the
-               controls below take over from there. -->
+               keyboard reaches it first. Once pressed it is gone for good and
+               nothing replaces it — the film clicks to pause and resume. -->
           <button class="vcover" id="vcover" type="button">
             <span class="vcover-in">
               <span class="vplay-disc" aria-hidden="true">
@@ -140,43 +142,10 @@
               </span>
               <span class="vcover-txt">
                 <span class="vcover-lead">Watch the tour</span>
-                <span class="vcover-sub">2 min 37 &middot; sound on</span>
+                <span class="vcover-sub">2 min 38 &middot; sound on</span>
               </span>
             </span>
           </button>
-
-          <!-- Controls. Ours, not the browser's: the stock bar is a different
-               product's design language sitting inside our portrait of ours. -->
-          <div class="vbar" id="vbar">
-            <button class="vb vb-play" id="vplay" type="button" aria-label="Play">
-              <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.4 5.6a1 1 0 0 1 1.52-.85l7.3 4.5a1 1 0 0 1 0 1.7l-7.3 4.5a1 1 0 0 1-1.52-.85z"/></svg>
-              <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.2h2.2a.6.6 0 0 1 .6.6v12.4a.6.6 0 0 1-.6.6H8a.6.6 0 0 1-.6-.6V5.8a.6.6 0 0 1 .6-.6m5.8 0H16a.6.6 0 0 1 .6.6v12.4a.6.6 0 0 1-.6.6h-2.2a.6.6 0 0 1-.6-.6V5.8a.6.6 0 0 1 .6-.6"/></svg>
-            </button>
-
-            <span class="vt vt-now" id="vnow">0:00</span>
-
-            <div class="vseek" id="vseek" role="slider" tabindex="0"
-                 aria-label="Seek" aria-valuemin="0" aria-valuemax="157"
-                 aria-valuenow="0" aria-valuetext="0:00 of 2:37">
-              <span class="vtrack" aria-hidden="true">
-                <span class="vbuf" id="vbuf"></span>
-                <span class="vfill" id="vfill"></span>
-              </span>
-              <span class="vknob" id="vknob" aria-hidden="true"></span>
-            </div>
-
-            <span class="vt vt-dur" id="vdur">2:37</span>
-
-            <button class="vb vb-mute" id="vmute" type="button" aria-label="Mute">
-              <svg class="i-loud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5.2 6.8 8.6H4.2a.6.6 0 0 0-.6.6v5.6a.6.6 0 0 0 .6.6h2.6L11 18.8z"/><path d="M15.4 9.2a4 4 0 0 1 0 5.6"/><path d="M18 6.6a7.6 7.6 0 0 1 0 10.8"/></svg>
-              <svg class="i-quiet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5.2 6.8 8.6H4.2a.6.6 0 0 0-.6.6v5.6a.6.6 0 0 0 .6.6h2.6L11 18.8z"/><path d="m15.6 9.8 4.8 4.4"/><path d="m20.4 9.8-4.8 4.4"/></svg>
-            </button>
-
-            <button class="vb vb-full" id="vfull" type="button" aria-label="Full screen">
-              <svg class="i-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.6H4.6V9"/><path d="M15 4.6h4.4V9"/><path d="M9 19.4H4.6V15"/><path d="M15 19.4h4.4V15"/></svg>
-              <svg class="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.6 9H9V4.6"/><path d="M19.4 9H15V4.6"/><path d="M4.6 15H9v4.4"/><path d="M19.4 15H15v4.4"/></svg>
-            </button>
-          </div>
         </div>
         <figcaption class="stage-foot">Two and a half minutes, start to finish. No signup, no sales call.</figcaption>
       </figure>
