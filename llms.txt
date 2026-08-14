@@ -1,0 +1,33 @@
+# Grapha
+
+> A native macOS notes app. You write in plain markdown files in a folder you own, and the coding agents you already use — Claude Code, Codex, Cursor — work inside those files: commenting in the margin, suggesting edits, waiting for your yes.
+
+Grapha has no server, no account and no sync. A note is an ordinary `.md` file
+on the user's own disk, in `~/Grapha`. There are no folders and no filing
+gesture; documents carry labels instead, and an agent is handed only the
+documents that carry a label it has been given. Notes can also cite live
+numbers from a read-only database connection, so a figure in a sentence can be
+the real one.
+
+The editor is free forever, with no key and no account. A single $49 payment —
+once, not a month — unlocks the agent harness on up to two Macs; before that it
+works free for 30 days from the first agent run.
+
+Every page on this site is also served as plain markdown at the same path with
+a `.md` suffix. Those files are the whole content, minus the design.
+
+## Pages
+
+- [Home](https://grapha.ai/index.md): what Grapha is, what it costs, and where to download it
+- [Privacy](https://grapha.ai/privacy.md): where notes live, what leaves the Mac, and what never does
+
+## Software
+
+- [Download for macOS](https://github.com/princeharshan/grapha-site/releases/latest/download/Grapha.dmg): the current release, direct — Apple silicon, macOS 14 or later
+- [Releases](https://github.com/princeharshan/grapha-site/releases): every version, with its notes
+- [Update feed](https://grapha.ai/updates.json): the static JSON the app itself reads once a day
+- [Public roadmap](https://grapha.userjot.com/roadmap): what is planned, what is building, what shipped
+
+## Contact
+
+- [support@grapha.ai](mailto:support@grapha.ai): the address that reaches a person

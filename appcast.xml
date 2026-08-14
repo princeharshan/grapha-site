@@ -43,6 +43,37 @@
     <language>en</language>
 
     <!--
+      0.1.10 (build 15) — the first release that reaches anyone already on
+      0.1.9 as an in-place update rather than a drag to Applications.
+
+      It shipped on 2026-08-12 and this entry was added on 2026-08-14, two days
+      late: the release was published and neither feed was moved, so for two
+      days updates.json still announced 0.1.6 and this file still offered 14.
+      Nothing contradicted itself, because the two were stale in the same
+      direction — the quiet failure of the three listed at the top of this file,
+      not the loud one. The signature below is over the published asset (sha256
+      0b612bc3b9ba4286836c8e43d664a3e3a6523da576431dde637dfda0733ba26f),
+      downloaded from the release rather than rebuilt, signed here, and verified
+      against the SUPublicEDKey in Grapha-Info.plist before being pasted in.
+    -->
+    <item>
+      <title>Grapha 0.1.10</title>
+      <pubDate>Tue, 11 Aug 2026 22:13:11 -0400</pubDate>
+      <sparkle:version>15</sparkle:version>
+      <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        The glow around a working agent is much quieter, coming back to Grapha
+        from another app no longer scrolls the page under you, and the bottom
+        bar stays on top where it belongs. A web address you type gets https on
+        its own.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.10/Grapha-0.1.10.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="mXLrHU/7yBOOa8YwlbpZwtH3mY3geoLX3cx0I1u21lkguUTsrDrE5ZyW8ZJMAlLueNqwEWgMTOww3Sey0cMmBg==" length="33425679" />
+    </item>
+
+    <!--
       0.1.9 (build 14) — the FIRST release Sparkle can actually install, and
       also the last one nobody can install this way. Every copy in anyone's
       hands today is 0.1.8 or earlier and has no updater in it at all, so this

@@ -1,0 +1,67 @@
+# grapha.ai
+#
+# Everything here is public and meant to be read — by people, by search
+# engines, and by agents. There is nothing to disallow: the site is a page,
+# a privacy page, a film and its poster.
+#
+# `User-agent: *` below already permits every crawler named after it. The
+# names are written out anyway, because a permission you can grep for is
+# worth more than one you have to infer, and because two of them
+# (Google-Extended, Applebot-Extended) exist only to be answered here.
+#
+# A plain-markdown map of the site is at https://grapha.ai/llms.txt, and
+# every page is also served as markdown at the same path with a .md suffix.
+
+User-agent: *
+Allow: /
+
+# OpenAI — training, search index, and the browser ChatGPT drives on request
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — training, search index, and the fetch Claude makes for a user
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Google and Apple: these two names govern AI use specifically, and absence
+# would be read as consent anyway. Said out loud instead.
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Perplexitybot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+Sitemap: https://grapha.ai/sitemap.xml

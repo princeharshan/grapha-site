@@ -6,6 +6,11 @@
 <title>Grapha — markdown notes your agents can work in</title>
 <meta name="description" content="A native Mac notes app. Plain markdown in a folder you own, and your coding agent working inside it. Free to write, forever.">
 <link rel="canonical" href="https://grapha.ai/">
+<!-- The same page as plain markdown. GitHub Pages cannot negotiate on an
+     Accept header — it has no server we configure — so the mirror is a second
+     address rather than a second representation, and this link plus
+     /llms.txt are how anything finds it. -->
+<link rel="alternate" type="text/markdown" href="index.md" title="This page in plain markdown">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B0C0E" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -44,13 +49,26 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Grapha",
+  "url": "https://grapha.ai/",
   "applicationCategory": "ProductivityApplication",
   "operatingSystem": "macOS 14",
+  "softwareRequirements": "Apple silicon Mac running macOS 14 or later",
+  "downloadUrl": "https://github.com/princeharshan/grapha-site/releases/latest/download/Grapha.dmg",
   "description": "A native Mac notes app. Markdown files on your disk, coding agents in the margin, and nothing to file.",
+  "featureList": [
+    "Notes are plain markdown files in a folder you own, with no proprietary format",
+    "No folders and no filing: documents carry labels instead",
+    "Coding agents — Claude Code, Codex, Cursor — comment and suggest edits in the margin, and nothing lands until you accept it",
+    "Agents are handed only the documents you label",
+    "Read-only database connections put live figures and charts inside a note, with the credential in the macOS Keychain",
+    "No account, no server, no sync, no telemetry"
+  ],
   "offers": {
     "@type": "Offer",
     "price": "49",
     "priceCurrency": "USD",
+    "url": "https://grapha.ai/",
+    "availability": "https://schema.org/InStock",
     "description": "One payment. Free to write forever; the key unlocks the agents."
   }
 }
