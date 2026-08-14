@@ -983,7 +983,10 @@ p { margin: 0; text-wrap: pretty; }
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.26);
   transition: background 260ms var(--ease-out);
 }
-#e .vplay-disc svg { width: 24px; height: 24px; margin-left: 2px; }
+/* The triangle is drawn centred on the viewBox — its stroked bounds sit at
+   12/12 exactly — so the disc needs no optical nudge, and a nudge is what
+   made it sit off to the right. */
+#e .vplay-disc svg { width: 24px; height: 24px; }
 #e .vcover:hover .vplay-disc { background: rgba(255, 255, 255, 0.24); }
 
 #e .vcover-txt { display: flex; flex-direction: column; gap: 2px; text-align: left; }
@@ -1331,9 +1334,10 @@ p { margin: 0; text-wrap: pretty; }
   /* A phone-width film is a small object; its cover has to stop shouting over
      it, and the frame's radius comes down with the object. */
   #e .vframe { border-radius: 16px; }
-  #e .vplay-disc { width: 56px; height: 56px; }
-  #e .vplay-disc svg { width: 24px; height: 24px; }
-  #e .vcover-lead { font-size: 17px; }
+  #e .vcover-in { gap: 12px; padding: 8px 20px 8px 8px; }
+  #e .vplay-disc { width: 44px; height: 44px; }
+  #e .vplay-disc svg { width: 21px; height: 21px; }
+  #e .vcover-lead { font-size: 16px; }
   #e .loop > li { padding: 20px; }
   #e .loop-foot { font-size: var(--t-17); }
   #e .price { padding: 28px 22px; }

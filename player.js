@@ -48,7 +48,17 @@
 
   film.addEventListener('play', function () { vid.classList.add('is-live', 'is-playing'); });
   film.addEventListener('pause', function () { vid.classList.remove('is-playing'); });
-  film.addEventListener('ended', function () { vid.classList.remove('is-playing'); });
+
+  /* At the end the <video> holds its last frame, which on this film is a dark
+     rectangle — a dead object where the hero used to be. Going back to the
+     cover is the only honest resting state: the poster returns, the label
+     returns, and pressing it plays from the top. `load()` rather than
+     `currentTime = 0` because only a reload puts the poster back on screen,
+     and `preload="none"` means it re-downloads nothing to do it. */
+  film.addEventListener('ended', function () {
+    vid.classList.remove('is-live', 'is-playing');
+    film.load();
+  });
 
   /* The keyboard reaches the cover, and after that the film has no focusable
      control left — so space and K stay, as the one way to pause without a
