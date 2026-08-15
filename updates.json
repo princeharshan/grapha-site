@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.11",
-    "build": 16,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.11/Grapha-0.1.11.dmg",
-    "notes": "The swoosh when a note is deleted is back no matter which interaction sound you use, and the bottom bar's labels no longer select like text."
+    "version": "0.1.10",
+    "build": 15,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.10/Grapha-0.1.10.dmg",
+    "notes": "The glow around a working agent is much quieter, coming back to Grapha from another app no longer scrolls the page under you, and a web address you type gets https on its own."
   },
   "announcements": []
 }
