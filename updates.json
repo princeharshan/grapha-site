@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.11",
-    "build": 16,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.11/Grapha-0.1.11.dmg",
-    "notes": "The swoosh when a note is deleted is back no matter which interaction sound you use, and the bottom bar's labels no longer select like text."
+    "version": "0.1.12",
+    "build": 17,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.12/Grapha-0.1.12.dmg",
+    "notes": "Diagrams open full screen now — hover one and press Open to zoom and pan it — pasted diagrams draw straight away, the bottom bar counts your words, and an agent no longer misses a comment you add while it is already working."
   },
   "announcements": []
 }

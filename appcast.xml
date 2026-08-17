@@ -43,6 +43,22 @@
     <language>en</language>
 
     <item>
+      <title>Grapha 0.1.12</title>
+      <pubDate>Sun, 16 Aug 2026 20:25:46 -0700</pubDate>
+      <sparkle:version>17</sparkle:version>
+      <sparkle:shortVersionString>0.1.12</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        Diagrams open full screen now &#8212; hover one and press Open to zoom
+        and pan it &#8212; pasted diagrams draw straight away, the bottom bar
+        counts your words, and an agent no longer misses a comment you add
+        while it is already working.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.12/Grapha-0.1.12.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="rJLt8rdbn1e8GNRT05PXO+u47kp8QiOx7rsYk6GQwW0HZBXEw2st8WbmS7gRoVFZeBEmflnBzzcdF5GrXs6WCw==" length="33457662" />
+    </item>
+    <item>
       <title>Grapha 0.1.11</title>
       <pubDate>Fri, 14 Aug 2026 13:34:01 -0400</pubDate>
       <sparkle:version>16</sparkle:version>
