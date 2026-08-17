@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.12",
-    "build": 17,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.12/Grapha-0.1.12.dmg",
-    "notes": "Diagrams open full screen now — hover one and press Open to zoom and pan it — pasted diagrams draw straight away, the bottom bar counts your words, and an agent no longer misses a comment you add while it is already working."
+    "version": "0.1.13",
+    "build": 18,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.13/Grapha-0.1.13.dmg",
+    "notes": "A quieter corner on diagrams and HTML blocks: the button that opens them full screen is now just its icon, and hovering it still tells you what it does."
   },
   "announcements": []
 }

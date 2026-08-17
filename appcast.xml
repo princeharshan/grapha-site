@@ -43,6 +43,22 @@
     <language>en</language>
 
     <item>
+      <title>Grapha 0.1.13</title>
+      <pubDate>Mon, 17 Aug 2026 08:17:15 -0700</pubDate>
+      <sparkle:version>18</sparkle:version>
+      <sparkle:shortVersionString>0.1.13</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        A quieter corner on diagrams and HTML blocks: the button that opens
+        them full screen is now just its icon, and hovering it still tells you
+        what it does.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.13/Grapha-0.1.13.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="+xCZIrHH53YiwivIQlK4C7fTEKUrs0v7y+c+CnME1NOGFIiztXp9q09Xe2EQEdmbsPjvGLM1joN+nHAX/JryAw==" length="33457571" />
+    </item>
+
+    <item>
       <title>Grapha 0.1.12</title>
       <pubDate>Sun, 16 Aug 2026 20:25:46 -0700</pubDate>
       <sparkle:version>17</sparkle:version>
