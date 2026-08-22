@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.13",
-    "build": 18,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.13/Grapha-0.1.13.dmg",
-    "notes": "A quieter corner on diagrams and HTML blocks: the button that opens them full screen is now just its icon, and hovering it still tells you what it does."
+    "version": "0.1.14",
+    "build": 19,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.14/Grapha-0.1.14.dmg",
+    "notes": "When an agent edits two paragraphs or bullets next to each other, the review now marks just the words that changed, instead of striking both whole and reprinting them almost identically underneath."
   },
   "announcements": []
 }
