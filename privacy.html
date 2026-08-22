@@ -4,31 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Grapha</title>
+<meta name="description" content="Where Grapha notes live, what leaves your Mac and what never does. No server, no account, no sync, no telemetry — and the exact detail on agents, databases, updates and crash reports.">
 <link rel="canonical" href="https://grapha.ai/privacy.html">
 <link rel="alternate" type="text/markdown" href="privacy.md" title="This page in plain markdown">
 <meta name="theme-color" content="#F7F8FA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
-<style>
-  /* A reading page. It borrows the site's tokens from `styles.css` — one
-     palette, one type scale, so this page cannot drift away from the homepage
-     the way a second stylesheet would. */
-  .page { max-width: 660px; margin: 0 auto; padding: 56px 20px 72px; }
-  .page h1 { font-size: var(--t-27); font-weight: 600; letter-spacing: -0.028em; margin: 0 0 8px; }
-  /* No `.sub` rule: the standfirst it styled is gone (owner, 2026-08-02) and it
-     was the only one on the page. The 40px it held below the title is not lost
-     — `h2`'s own top margin is 40 and collapses against the h1's 8. */
-  .page h2 { font-size: var(--t-17); font-weight: 600; margin: 40px 0 8px; }
-  .page p, .page li { font-size: var(--t-15); line-height: 1.7; color: var(--ink-2); }
-  .page p + p { margin-top: 12px; }
-  .page ul { padding-left: 1.2em; }
-  .page li { margin-bottom: 4px; }
-  .page strong { color: var(--ink); font-weight: 500; }
-  .page a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-  .back { display: inline-block; margin-bottom: 40px; font-size: var(--t-15); color: var(--ink-3); text-decoration: none; }
-  .back:hover { color: var(--ink-2); }
-</style>
+<link rel="stylesheet" href="page.css">
 </head>
 <body>
 <div class="page">
@@ -68,6 +51,10 @@
        removed or explained, and it should not be the page that hands them the
        owner's personal mailbox. -->
   <p><a href="mailto:support@grapha.ai">support@grapha.ai</a></p>
+
+  <div class="pagenav">
+    <a href="./">Home</a><span>&middot;</span><a href="about.html">About</a><span>&middot;</span><a href="contact.html">Contact</a><span>&middot;</span><a href="agents.html">For agents</a><span>&middot;</span><a href="privacy.md">This page in markdown</a>
+  </div>
 </div>
 </body>
 </html>

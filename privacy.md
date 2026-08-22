@@ -71,3 +71,10 @@ third-party scripts on this website.
 ## Getting in touch
 
 [support@grapha.ai](mailto:support@grapha.ai)
+
+## Links
+
+- [Home](https://grapha.ai/index.md)
+- [About](https://grapha.ai/about.md)
+- [Contact](https://grapha.ai/contact.md)
+- [For agents and developers](https://grapha.ai/agents.md)

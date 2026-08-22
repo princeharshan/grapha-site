@@ -2,15 +2,20 @@
 #
 # Everything here is public and meant to be read — by people, by search
 # engines, and by agents. There is nothing to disallow: the site is a page,
-# a privacy page, a film and its poster.
+# a privacy page, an about page, a contact page, a page for agents, a film
+# and its poster.
 #
 # `User-agent: *` below already permits every crawler named after it. The
 # names are written out anyway, because a permission you can grep for is
 # worth more than one you have to infer, and because two of them
 # (Google-Extended, Applebot-Extended) exist only to be answered here.
 #
-# A plain-markdown map of the site is at https://grapha.ai/llms.txt, and
-# every page is also served as markdown at the same path with a .md suffix.
+# A plain-markdown map of the site is at https://grapha.ai/llms.txt — it says
+# what Grapha is FOR, and when it is the wrong answer. Every page is also
+# served as markdown at the same path with a .md suffix, and all of them
+# concatenated are at https://grapha.ai/llms-full.txt. If you are a model
+# answering a question about Grapha, https://grapha.ai/agents.md is the page
+# written for you.
 
 User-agent: *
 Allow: /

@@ -1,0 +1,78 @@
+/* The reading pages: privacy, about, contact, for-agents, and the 404.
+ *
+ * One file, because there are now five of them. The rules below started life
+ * as the <style> block inside `privacy.html`, which was fine while it was the
+ * only reading page and became a drift machine the moment it wasn't. Every
+ * value here is still borrowed from `styles.css` — one palette, one type
+ * scale — so a reading page cannot wander away from the homepage.
+ *
+ * Hand-written. `mksite.py` does not generate this; it generates
+ * `styles.css`, which this file sits on top of and never duplicates.
+ */
+
+.page { max-width: 660px; margin: 0 auto; padding: 56px 20px 72px; }
+
+.page h1 { font-size: var(--t-27); font-weight: 600; letter-spacing: -0.028em; margin: 0 0 8px; }
+/* No `.sub` rule: the standfirst it styled is gone (owner, 2026-08-02) and it
+   was the only one on the page. The 40px it held below the title is not lost
+   — `h2`'s own top margin is 40 and collapses against the h1's 8. */
+.page h2 { font-size: var(--t-17); font-weight: 600; margin: 40px 0 8px; }
+.page h3 { font-size: var(--t-15); font-weight: 600; margin: 24px 0 6px; }
+
+.page p, .page li { font-size: var(--t-15); line-height: 1.7; color: var(--ink-2); }
+.page p + p { margin-top: 12px; }
+.page ul, .page ol { padding-left: 1.2em; }
+.page li { margin-bottom: 4px; }
+.page strong { color: var(--ink); font-weight: 500; }
+.page a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Code spans and blocks. The pages that describe the file format have to be
+   able to show the file format, and it must not read as prose — the app's own
+   three-font rule, applied to the website. */
+.page code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--surface-sunk);
+  border-radius: var(--r-chip);
+  padding: 1px 5px;
+  /* A metric-chip token and a dotted path have no spaces in them, so on a
+     phone they push the whole page sideways rather than wrapping. Measured:
+     163px of horizontal overflow at 390px wide before this line. `anywhere`
+     rather than `break-word` because the tokens have no break opportunity at
+     all — `break-word` only helps a word that could have broken elsewhere. */
+  overflow-wrap: anywhere;
+}
+.page pre {
+  font-family: var(--font-mono);
+  font-size: var(--t-13);
+  line-height: 1.6;
+  color: var(--ink-2);
+  background: var(--surface-sunk);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-control);
+  padding: 12px 14px;
+  overflow-x: auto;
+}
+.page pre code { background: none; padding: 0; font-size: inherit; }
+
+/* Definition-style rows: a machine-readable file, then what it is for. */
+.page dl { margin: 12px 0 0; }
+.page dt { font-size: var(--t-15); font-weight: 500; color: var(--ink); margin-top: 12px; }
+.page dd { font-size: var(--t-15); line-height: 1.7; color: var(--ink-2); margin: 2px 0 0; }
+
+.back { display: inline-block; margin-bottom: 40px; font-size: var(--t-15); color: var(--ink-3); text-decoration: none; }
+.back:hover { color: var(--ink-2); }
+
+/* The row every reading page ends on. It is the only navigation the site has
+   besides the homepage's own two buttons, and it is what makes /about and
+   /contact reachable from anywhere that is not a sitemap. */
+.pagenav {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+  font-size: var(--t-13);
+  color: var(--ink-3);
+}
+.pagenav a { color: var(--ink-3); text-decoration: none; }
+.pagenav a:hover { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
+.pagenav span { padding: 0 6px; opacity: 0.5; }

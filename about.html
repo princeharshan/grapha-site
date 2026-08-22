@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Grapha — who makes it and why</title>
+<meta name="description" content="Grapha is a native Mac markdown notes app made in Ottawa, Canada. Independent, one-time price, no server and no account. What it is, why it exists, and how it is funded.">
+<link rel="canonical" href="https://grapha.ai/about.html">
+<link rel="alternate" type="text/markdown" href="about.md" title="This page in plain markdown">
+<meta name="theme-color" content="#F7F8FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="page.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Grapha",
+  "url": "https://grapha.ai/about.html",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://grapha.ai/#organization",
+    "name": "Grapha",
+    "alternateName": "Grapha Notes",
+    "url": "https://grapha.ai/",
+    "logo": "https://grapha.ai/icon-192.png",
+    "image": "https://grapha.ai/og.png",
+    "description": "Grapha makes a native macOS markdown notes app that keeps every note as a plain .md file on the user's own disk and lets coding agents work inside those files.",
+    "email": "support@grapha.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ottawa",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@grapha.ai",
+      "url": "https://grapha.ai/contact.html",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English"]
+    }],
+    "sameAs": [
+      "https://github.com/princeharshan/grapha-site",
+      "https://grapha.userjot.com/roadmap"
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<div class="page">
+  <a class="back" href="./">&larr; Grapha</a>
+
+  <h1>About Grapha</h1>
+
+  <h2>What Grapha is</h2>
+  <p>Grapha is a native macOS notes app. You write in markdown, the app renders what you write instead of showing you the syntax, and the file on your disk stays ordinary markdown the whole time. Notes live in a folder called <code>~/Grapha</code> &mdash; one folder per note, holding a <code>note.md</code> alongside its images and its history. Nothing about a note is proprietary. Open the folder in any other editor, or in git, and it is all there.</p>
+  <p>There is no filing. No folders, no projects, no templates: you write, and the note exists. Documents carry labels instead of a location, and a label is also how you tell an agent which documents it may read.</p>
+
+  <h2>Why it exists</h2>
+  <p>Note-taking apps were supposed to make thinking easier. Somewhere along the way they started requiring more of it &mdash; folders to file, tags to assign, templates to maintain, systems to uphold. What began as a way to hold onto ideas became another thing to manage.</p>
+  <p>Grapha is built on a different belief: that the best thinking tool is one you barely notice. Write freely, without deciding where something lives or what it belongs to. That is the whole design brief, and every feature is measured against it.</p>
+  <p>The second belief is that a note should be able to tell the truth. A figure typed into a document is accurate on the day it is typed and quietly wrong from then on. In Grapha a number in a sentence, or a chart in a page, can be bound to a read-only database connection and be the real current figure. The app runs the query locally; a language model is never handed a credential and never executes anything.</p>
+
+  <h2>Agents in the margin</h2>
+  <p>The coding agents people already pay for &mdash; Claude Code, Codex, Cursor &mdash; are very good at reading and writing markdown, and terrible at being trusted with a document unsupervised. So in Grapha an agent works in the margin: it leaves a comment, or a suggested edit, and nothing it proposes lands in the file until you accept it. It runs under your own subscription or API key, and it is handed only the documents you have labelled for it. Everything else in the folder is invisible to it.</p>
+
+  <h2>How it is funded</h2>
+  <p>By people buying it, once. The markdown editor is free for everyone, forever, with no key and no account. The agent harness is <strong>$49 &mdash; a single payment, not a subscription</strong> &mdash; and it covers up to two Macs. Before you pay anything, agents work free for 30 days from your first agent run, not from the day you install.</p>
+  <p>There is no venture funding behind this, no free tier that expires into a monthly bill, and no plan to sell anything else later. Payment is handled by <a href="https://polar.sh">Polar</a>, who are the merchant of record; Grapha never sees a card number.</p>
+
+  <h2>What Grapha never does</h2>
+  <ul>
+    <li>No account, no server, no sync. Your notes are files, and they stay on your Mac.</li>
+    <li>No telemetry, no usage tracking, no analytics, and no third-party scripts on this website.</li>
+    <li>No proprietary format. Every rich thing in a note &mdash; a chart, a diagram, a live figure &mdash; is written into the markdown as text you can read.</li>
+    <li>No write access to a database you connect. Connections are read-only, and the credential lives in the macOS Keychain.</li>
+  </ul>
+  <p>The full detail is on the <a href="privacy.html">privacy page</a>, which is short and factual rather than long and legal.</p>
+
+  <h2>Who makes it</h2>
+  <p>Grapha is an independent, self-funded project built in <strong>Ottawa, Canada</strong>. It is distributed directly as a notarized download rather than through the Mac App Store, because the App Store sandbox forbids launching the coding agent binaries the app is built around.</p>
+  <p>Support, bugs and feature requests all reach a person: <a href="mailto:support@grapha.ai">support@grapha.ai</a>, or the <a href="https://grapha.userjot.com/roadmap">public roadmap</a>, where you can see what is planned, what is being built and what has shipped. More ways to get in touch are on the <a href="contact.html">contact page</a>.</p>
+
+  <div class="pagenav">
+    <a href="./">Home</a><span>&middot;</span><a href="contact.html">Contact</a><span>&middot;</span><a href="agents.html">For agents</a><span>&middot;</span><a href="privacy.html">Privacy</a><span>&middot;</span><a href="about.md">This page in markdown</a>
+  </div>
+</div>
+</body>
+</html>

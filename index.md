@@ -53,6 +53,10 @@ your first run.
 ## Links
 
 - [Download](https://github.com/princeharshan/grapha-site/releases/latest/download/Grapha.dmg)
+- [About](https://grapha.ai/about.md) — why Grapha exists, how it is funded, who makes it
+- [Contact](https://grapha.ai/contact.md) — support, bugs, licences, refunds, security, press
+- [For agents and developers](https://grapha.ai/agents.md) — when to use Grapha and when not to, and how a program works with it
 - [Privacy](https://grapha.ai/privacy.md)
 - [Public roadmap](https://grapha.userjot.com/roadmap)
+- [The map of this site](https://grapha.ai/llms.txt)
 - [support@grapha.ai](mailto:support@grapha.ai)

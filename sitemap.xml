@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Two pages, because there are two pages. The markdown mirrors (index.md,
-  privacy.md) are deliberately NOT listed: they are the same content at a
-  second address, and a sitemap is where a search engine learns which address
-  is the real one. Agents find the mirrors through llms.txt and through the
-  <link rel="alternate" type="text/markdown"> in each page's head.
+  Five pages, because there are five pages. The markdown mirrors (index.md,
+  about.md, contact.md, agents.md, privacy.md) are deliberately NOT listed:
+  they are the same content at a second address, and a sitemap is where a
+  search engine learns which address is the real one. Agents find the mirrors
+  through llms.txt and through the <link rel="alternate" type="text/markdown">
+  in each page's head.
+
+  404.html is not listed either, for the obvious reason.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://grapha.ai/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://grapha.ai/agents.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grapha.ai/about.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grapha.ai/contact.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://grapha.ai/privacy.html</loc>
