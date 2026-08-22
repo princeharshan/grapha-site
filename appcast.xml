@@ -43,6 +43,20 @@
     <language>en</language>
 
     <item>
+      <title>Grapha 0.1.15</title>
+      <pubDate>Sat, 22 Aug 2026 03:21:00 -0400</pubDate>
+      <sparkle:version>20</sparkle:version>
+      <sparkle:shortVersionString>0.1.15</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        When you accept or reject an agent's suggested edit, the decision now sticks — before, accepted edits came back as suggestions the next time you opened the note.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.15/Grapha-0.1.15.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="BkWwbaNT/8XSgrwkWdpcjkD/qtoIQ6K1aLLRljFSz3Au/euvBh/UAB3LleM0hwmjazDnwI7SfbW2MzStuHSeBA==" length="33470672" />
+    </item>
+
+    <item>
       <title>Grapha 0.1.14</title>
       <pubDate>Fri, 21 Aug 2026 21:36:48 -0400</pubDate>
       <sparkle:version>19</sparkle:version>
