@@ -43,6 +43,20 @@
     <language>en</language>
 
     <item>
+      <title>Grapha 0.1.16</title>
+      <pubDate>Sat, 29 Aug 2026 13:20:23 -0400</pubDate>
+      <sparkle:version>21</sparkle:version>
+      <sparkle:shortVersionString>0.1.16</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        Diagrams open big now: preview one from its menu or its corner arrow, click to zoom in, double-click to fit — and closing a preview leaves you exactly where you were reading. Sequence diagrams also name each column at the bottom as well as the top.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.16/Grapha-0.1.16.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="qQ1ZRMNeGOA0nRTASobGFxq8JiM4EWQTdQsSxS7V/2fyjrlcYhNiG3WbSbTQp8jwoG/fXMFn1EAAFTWISgtKAg==" length="33471401" />
+    </item>
+
+    <item>
       <title>Grapha 0.1.15</title>
       <pubDate>Sat, 22 Aug 2026 03:21:00 -0400</pubDate>
       <sparkle:version>20</sparkle:version>

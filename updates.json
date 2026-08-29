@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.15",
-    "build": 20,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.15/Grapha-0.1.15.dmg",
-    "notes": "When you accept or reject an agent's suggested edit, the decision now sticks — before, accepted edits came back as suggestions the next time you opened the note."
+    "version": "0.1.16",
+    "build": 21,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.16/Grapha-0.1.16.dmg",
+    "notes": "Diagrams open big now: preview one from its menu or its corner arrow, click to zoom in, double-click to fit — and closing a preview leaves you exactly where you were reading. Sequence diagrams also name each column at the bottom as well as the top."
   },
   "announcements": []
 }
