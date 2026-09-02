@@ -43,6 +43,19 @@
     <language>en</language>
 
     <item>
+      <title>Grapha 0.1.17</title>
+      <pubDate>Tue, 01 Sep 2026 22:39:53 -0400</pubDate>
+      <sparkle:version>22</sparkle:version>
+      <sparkle:shortVersionString>0.1.17</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        Link previews now find the page's picture: a site that never set a share image gets its own main image instead of an empty globe, and large images are no longer dropped.
+      ]]></description>
+      <enclosure url="https://github.com/princeharshan/grapha-site/releases/download/v0.1.17/Grapha-0.1.17.dmg"
+                 type="application/octet-stream"
+                 sparkle:edSignature="QDA+VqZpfHc6KAxOUuYQqZghK491Hx4LxR8RuLAJhhIH04Q+5jKulJshWd3de6gPTzzLOzIfDH/dfDoRRK2VDw==" length="33472547" />
+    </item>
+    <item>
       <title>Grapha 0.1.16</title>
       <pubDate>Sat, 29 Aug 2026 13:20:23 -0400</pubDate>
       <sparkle:version>21</sparkle:version>

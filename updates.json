@@ -18,10 +18,10 @@
   ],
   "schema": 1,
   "latest": {
-    "version": "0.1.16",
-    "build": 21,
-    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.16/Grapha-0.1.16.dmg",
-    "notes": "Diagrams open big now: preview one from its menu or its corner arrow, click to zoom in, double-click to fit — and closing a preview leaves you exactly where you were reading. Sequence diagrams also name each column at the bottom as well as the top."
+    "version": "0.1.17",
+    "build": 22,
+    "url": "https://github.com/princeharshan/grapha-site/releases/download/v0.1.17/Grapha-0.1.17.dmg",
+    "notes": "Link previews now find the page's picture: a site that never set a share image gets its own main image instead of an empty globe, and large images are no longer dropped."
   },
   "announcements": []
 }
